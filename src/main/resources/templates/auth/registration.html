@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/new-mogo/style.css">
+    <link rel="stylesheet" href="/css/auth/auth.css">
+    <title>Registration</title>
+</head>
+<body>
+
+<header th:replace="blocks/header :: header" ></header>
+
+<div class="auth">
+    <h1 class="auth__title">Registration</h1>
+
+    <form th:action="@{/auth/login}" method="post">
+        <div class="group">
+            <input class="input" type="text" name="username" placeholder="Username" required minlength="5" maxlength="15">
+        </div>
+
+        <div class="group">
+            <input class="input" type="email" name="email" placeholder="Email" required>
+        </div>
+
+        <div class="group">
+            <input class="input" type="tel" name="phone" placeholder="Phone" required minlength="5" maxlength="15">
+        </div>
+
+        <div class="group">
+            <input class="input" type="password" name="password" placeholder="Password" required minlength="5" maxlength="10">
+        </div>
+
+        <div class="group">
+            <input class="input" type="password" name="confirm_password" placeholder="Confirm password" required minlength="5" maxlength="10">
+        </div>
+        <div class="group">
+            <select class="select" name="city">
+                <option >Riga</option>
+                <option >London</option>
+            </select>
+        </div>
+
+        <div class="group">
+            <input type="checkbox" name="rules" id="rules" required>
+            <label for="rules">Accept conditions</label>
+        </div>
+
+        <button class="btn_auth" type="submit">Finish</button>
+
+
+    </form>
+
+</div>
+
+</body>
+</html>

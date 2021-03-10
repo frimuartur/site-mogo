@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/new-mogo/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../fonts/all.min.css">
+    <link rel="stylesheet" href="../fonts/fontawesome.min.css">
+    <title>Articles</title>
+</head>
+<body>
+
+    <header th:replace="blocks/header-black :: header-black" ></header>
+
+    <form th:action="@{/logout}" method="post">
+        <input class="logOut" type="submit" value="Sign Out"/>
+    </form>
+
+    <section class="section article">
+        <div class="container">
+            <div class="section__header">
+                <div class="card">
+                    <div class="card__item">
+                        <div class="card__inner">
+                            <div class="card__img">
+                                <img src="../css/new-mogo/Images/about/1.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="card__text">Super team</div>
+                    </div>
+
+                    <div class="card__item">
+                        <div class="card__inner">
+                            <div class="card__img">
+                                <img src="../css/new-mogo/Images/about/2.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="card__text">Super team</div>
+                    </div>
+
+                    <div class="card__item">
+                        <div class="card__inner">
+                            <div class="card__img">
+                                <img src="../css/new-mogo/Images/about/3.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="card__text">Super team</div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- container -->
+    </section>
+
+    <div th:replace="blocks/article-block :: article-block" ></div>
+
+    <div class="statistics">
+        <div class="container">
+
+            <div class="stat">
+                <div class="stat__item">
+                    <div class="stat__count">42</div>
+                    <div class="stat__text">Web Design Projects</div>
+                </div>
+
+                <div class="stat__item">
+                    <div class="stat__count">123</div>
+                    <div class="stat__text">happy client</div>
+                </div>
+
+                <div class="stat__item">
+                    <div class="stat__count">15</div>
+                    <div class="stat__text">award winner</div>
+                </div>
+
+                <div class="stat__item">
+                    <div class="stat__count">99</div>
+                    <div class="stat__text">cup of coffee</div>
+                </div>
+
+                <div class="stat__item">
+                    <div class="stat__count">24</div>
+                    <div class="stat__text">numbers</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer th:replace="blocks/footer :: footer"></footer>
+
+</body>
+</html>

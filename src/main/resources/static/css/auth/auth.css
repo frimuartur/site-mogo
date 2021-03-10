@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    font:15px/1.5 Arial, Helvetica, sans-serif;
+    background: url(../auth/images/wood.jpg);
+}
+
+.auth {
+    width: 280px;
+    padding: 20px;
+    margin: 100px auto;
+
+    background-color: #e5e5e5;
+}
+
+.auth__title {
+    margin: 0 0 15px;
+    font-size: 20px;
+    color: #c61919;
+    text-align: center;
+}
+
+.group {
+    margin-bottom: 15px;
+}
+
+.input {
+    display: block;
+    background-color: #fff;
+
+    width: 100%;
+    padding: 8px 10px;
+
+    border: 1px solid #ccc;
+
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.input:focus {
+    outline: none;
+
+    border-color: #28cbd1;
+}
+
+.select {
+    display: block;
+    background-color: #fff;
+
+    width: 100%;
+    height: 35px;
+    padding: 8px 10px;
+
+    border: 1px solid #ccc;
+
+    font-family: inherit;
+    font-size: 15px;
+
+}
+
+.select:focus {
+    outline: none;
+
+    border-color: #28cbd1;
+}
+
+.btn_auth {
+    display: block;
+    width: 100%;
+    padding: 10px;
+
+    border:0;
+    background-color: #4bb91b;
+
+    font-family: inherit;
+    font-size: 15px;
+    color: #fff;
+}
+
+.btn_auth:focus {
+    outline: 0;
+}
+
+.btn_auth:hover,
+.btn_auth:focus {
+    background-color: #41aa14;
+    cursor: pointer;
+}
+
+.btn_auth:active {
+    background-color: #36980d;
+}
+

@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/new-mogo/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../fonts/all.min.css">
+    <link rel="stylesheet" href="../fonts/fontawesome.min.css">
+    <title>Blog</title>
+</head>
+<body>
+
+<header th:replace="blocks/header-black :: header-black" ></header>
+
+<form th:action="@{/logout}" method="post">
+    <input class="logOut" type="submit" value="Sign Out"/>
+</form>
+
+
+<!--Blog-->
+<section class="section">
+    <div class="container">
+
+        <div class="section__header">
+            <h3 class="section__suptitle">Our stories</h3>
+            <h2 class="section__title">Latest blog</h2>
+        </div>
+
+        <div class="blog">
+            <div class="blog__item">
+                <div class="blog__headr">
+                    <a href="#"><img class="blog__photo" src="../css/new-mogo/Images/blog/1.jpg" alt=""></a>
+                    <div class="blog__date">
+                        <div class="blog__date-day">15</div> Jan
+                    </div>
+                </div>
+
+                <div class="blog__content">
+                    <div class="blog__title">
+                        <a href="#">Lorem ipsum dolor sit amet.</a>
+                    </div>
+                    <div class="blog__text">Amet consectetur adipisicing elit. Dolor sapiente inventore aspernatur neque ullam molestiae!</div>
+                </div>
+
+                <div class="blog__footer">
+                    <div class="blog__stat">
+                        <span class="blog__stat__item"><i class="far fa-eye"></i>542</span>
+                        <span class="blog__stat__item"><i class="far fa-comment-dots"></i>17</span>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="blog__item">
+                <div class="blog__headr">
+                    <a href="#"><img class="blog__photo" src="../css/new-mogo/Images/blog/2.jpg" alt=""></a>
+                    <div class="blog__date">
+                        <div class="blog__date-day">14</div> Jan
+                    </div>
+                </div>
+
+                <div class="blog__content">
+                    <div class="blog__title">
+                        <a href="#">Lorem ipsum dolor sit amet.</a>
+                    </div>
+                    <div class="blog__text">Amet consectetur adipisicing elit. Dolor sapiente inventore aspernatur neque ullam molestiae!</div>
+                </div>
+
+                <div class="blog__footer">
+                    <div class="blog__stat">
+                        <span class="blog__stat__item"><i class="far fa-eye"></i>992</span>
+                        <span class="blog__stat__item"><i class="far fa-comment-dots"></i>42</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog__item">
+                <div class="blog__headr">
+                    <a href="#"><img class="blog__photo" src="../css/new-mogo/Images/blog/3.jpg" alt=""></a>
+                    <div class="blog__date">
+                        <div class="blog__date-day">12</div> Jan
+                    </div>
+                </div>
+
+                <div class="blog__content">
+                    <div class="blog__title">
+                        <a href="#">Lorem ipsum dolor sit amet.</a>
+                    </div>
+                    <div class="blog__text">Amet consectetur adipisicing elit. Dolor sapiente inventore aspernatur neque ullam molestiae!</div>
+                </div>
+
+                <div class="blog__footer">
+                    <div class="blog__stat">
+                        <span class="blog__stat__item"><i class="far fa-eye"></i>1560</span>
+                        <span class="blog__stat__item"><i class="far fa-comment-dots"></i>98</span>
+                    </div>
+                </div>
+            </div>
+        </div><!-- blog -->
+
+    </div><!-- container -->
+</section>
+
+<section class="section section--map">
+    <div class="container">
+        <div class="map">
+            <h2 class="map__title">
+                <div><i class="fas fa-map-marker-alt"></i></div>
+                <a href="https://goo.gl/maps/JYaG9Kxp7UcSNkjx9" target="_blank">Open Map</a>
+            </h2>
+        </div>
+
+    </div>
+</section>
+
+    <footer th:replace="blocks/footer :: footer"></footer>
+
+</body>
+</html>
