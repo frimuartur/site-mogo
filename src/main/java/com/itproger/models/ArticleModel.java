@@ -1,20 +1,27 @@
 package com.itproger.models;
 
-
 import javax.persistence.*;
 
 @Entity
+@Table(name = "articles")
 public class ArticleModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String text, title;
+    @Column(name = "user_id")
+    private Long userId;
 
-    public ArticleModel(String text, String title) {
-        this.text = text;
+    private String title;
+
+    @Lob
+    private String text;
+
+    public ArticleModel(Long userId, String title, String text) {
+        this.userId = userId;
         this.title = title;
+        this.text = text;
     }
 
     public ArticleModel() {
@@ -42,5 +49,13 @@ public class ArticleModel {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 }

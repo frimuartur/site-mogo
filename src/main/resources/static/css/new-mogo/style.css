@@ -191,6 +191,106 @@ hr {
     color: #333;
 }
 
+/* BTN FORM ARTILCE
+=========================================*/
+.article__form {
+    position: relative;
+}
+
+.button {
+    display: block;
+
+    padding: 10px;
+    width: 150px;
+    border-radius: 10px;
+    border: 1px solid #999;
+
+    font-size: 20px;
+    background: transparent;
+}
+
+.button.save {
+    position: absolute;
+    right: 0;
+    top: 22%;
+
+    transform: translateX(110%);
+    margin: 0 auto;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    color: black;
+    transition: border-color .3s linear,
+    background-color .2s linear,
+    color .2s linear;
+}
+
+.button.save:hover {
+    border-color: rgb(5, 98, 10);
+    background-color: rgb(5, 98, 10);
+    color: #fff;
+}
+
+.section.article_form {
+    transform: translateY(-150px);
+    padding-bottom: 50px;
+
+}
+
+.all__articles {
+    transform: translateY(-200px);
+}
+
+/* TEXT AREA */
+
+.article__group {
+    width: 100%;
+
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.article__title,
+.article__message {
+    resize: none;
+    width: 100%;
+    height: 35px;
+    padding: 10px;
+
+    border: 1px solid #ccc;
+
+    font-size: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    color: black;
+}
+
+.article__message {
+    height: 200px;
+}
+
+.article__message::placeholder,
+.article__title::placeholder {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 23px;
+    font-style: italic;
+    font-weight: 300;
+    color: #999;
+}
+
+
+
+.article__message:focus,
+.article__title:focus {
+    outline: none;
+    background-color: #eee;
+}
+
+/* Finish FORM ARTILCE
+=========================================*/
+
 .logOut {
     display: block;
     position: fixed;
@@ -208,8 +308,8 @@ hr {
 }
 
 .logOut:hover {
-    background-color: #333333;
-    opacity: .7;
+    background-color: #333;
+    opacity: .8;
     color: #fff;
 }
 
@@ -217,6 +317,16 @@ hr {
     background-color: #333333;
     opacity: .5;
     color: #fff;
+}
+.logOut.black {
+    border: 2px solid #fff;
+    background-color: transparent;
+    color: #fff;
+}
+
+.logOut.black:hover {
+    border: 2px solid #fce38a;
+    color: #fce38a;
 }
 
 /* Slider */
@@ -611,12 +721,13 @@ hr {
 
 .reviews__text {
     margin-bottom: 15px;
-
     font-size: 23px;
     font-style: italic;
     font-weight: 300;
     color: #999;
 }
+
+
 
 .reviews__author {
     font-family: 'Kaushan Script', cursive;

@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/new-mogo/style.css">
+    <link rel="stylesheet" href="/css/new-mogo/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../fonts/all.min.css">
     <link rel="stylesheet" href="../fonts/fontawesome.min.css">
@@ -10,9 +10,9 @@
 </head>
 <body>
 
-    <header th:replace="blocks/header-black :: header-black" ></header>
+    <header th:replace="blocks/header-black :: header-black"></header>
 
-    <form th:action="@{/logout}" method="post">
+    <form th:action="@{/logout}" th:method="post">
         <input class="logOut" type="submit" value="Sign Out"/>
     </form>
 
@@ -51,7 +51,51 @@
         </div> <!-- container -->
     </section>
 
-    <div th:replace="blocks/article-block :: article-block" ></div>
+<!--    <div th:replace="blocks/article-form :: article-form"></div>-->
+    <div class="section article_form">
+        <div class="container">
+            <div class="reviews">
+                <div class="article__form">
+
+                    <form th:action="@{/article/save}" th:method="post" th:object="${article}">
+
+                        <div class="article__group">
+                            <input name="title" th:field="*{title}" class="article__title" placeholder="Title"/>
+                        </div>
+
+                        <div class="article__group">
+                            <textarea name="text" th:field="*{text}" class="article__message" placeholder="Text"></textarea>
+                        </div>
+
+                        <div class="reviews__author">Artur Frimu</div>
+
+                        <button class="button save" type="submit">Save</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="all__articles" th:each="art : ${listOfArticles}">
+        <div class="section">
+            <div class="container">
+                <div class="reviews">
+                    <a class="reviews__btn reviews__btn--prev" href="#">Prev</a>
+                    <a class="reviews__btn reviews__btn--next" href="#">Next</a>
+                    <div class="reviews__item">
+                        <img class="reviews__photo" src="../css/new-mogo/Images/avatar.png" alt="">
+                        <div class="reviews__author" th:text = "${art.title}">Joshua Earel</div>
+                        <div class="reviews__text" th:text = "${art.text}">
+                            <i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente a placeat reprehenderit culpa odio veniam praesentium fugiat earum velit assumenda.</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     <div class="statistics">
         <div class="container">

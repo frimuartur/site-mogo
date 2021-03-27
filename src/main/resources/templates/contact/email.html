@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/new-mogo/style.css">
+    <link rel="stylesheet" href="/css/email/email.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../fonts/all.min.css">
+    <link rel="stylesheet" href="../fonts/fontawesome.min.css">
+    <title>Home</title>
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <div class="header__logo">MoGo</div>
+
+            <nav class="nav">
+                <a class="nav__link" href="/home">Home</a>
+                <a class="nav__link" href="/about">About</a>
+                <a class="nav__link" href="/article">Article</a>
+                <a class="nav__link" href="/blog">Blog</a>
+                <a class="nav__link" href="/work">Work</a>
+                <a class="nav__link" href="/contact">Contact</a>
+                <form th:action="@{/logout}" method="post">
+                    <input class="logOut black" type="submit" value="Sign Out"/>
+                </form>
+            </nav>
+        </div>
+    </div>
+</header>
+
+        <div class="page">
+            <div class="container">
+                <main class="main">
+                    <form th:action="@{/sendEmail}" th:method="post" th:object = ${newEmail}>
+                        <div class="form__title">
+                            <h1>Send Message</h1>
+                        </div>
+                        <div class="form__group">
+                            <label class="form__label" for="form_to">To</label>
+                            <input class="form__input" type="text" id="form_to" name="to" placeholder="example@gmail.com">
+                        </div>
+                        <div class="form__group">
+                            <label class="form__label" for="form_subject">Subject</label>
+                            <input class="form__input" type="text" id="form_subject" name="subject" placeholder="Write subject">
+                        </div>
+                        <div class="form__group">
+                            <label class="form__label" for="form_text">Text</label>
+                            <textarea class="form__textarea" type="text" id="form_text" name="message" placeholder="Write your message"></textarea>
+                        </div>
+                        <div class="form__group">
+                            <label for="photo">Attachement</label>
+                            <input type="file" name="attachement" id="photo">
+                        </div>
+                        <button class="btnEmail send" type="submit">Send</button>
+                    </form>
+                </main>
+            </div>
+        </div>
+    </body>
+</html>

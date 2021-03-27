@@ -2,50 +2,27 @@ package com.itproger.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.servlet.http.HttpServletRequest;
 
-//@Controller
+@Controller
+@RequestMapping("/test")
 public class TestController {
 
-//    @PostMapping("/auth/login")
-//    public String showInConsoleParametersForm (@RequestParam("username") String username,
-//                                               @RequestParam("email") String email,
-//                                               @RequestParam("password") String password,
-//                                               @RequestParam("confirm_password") String confirm_password,
-//                                               @RequestParam("phone") String phone,
-//                                               @RequestParam("city") String city,
-//                                               Model model) {
-//
-//        System.out.println("My username is: " + username);
-//        System.out.println("My email is: " + email);
-//        System.out.println("I'm from: " + city);
-//        System.out.println("My tel is: " + phone);
-//        System.out.println("My password is: " + password);
-//        System.out.println("Confirm my password: " + confirm_password);
-//        return "/auth/registration";
-//    }
+    @GetMapping("/emailPage")
+    public String showEmailPage(Model model) {
+        model.addAttribute("object", new Object());   // Trimitem in view un obiect gol
+        return "/emailPage";
+    }
 
+    @PostMapping("/sendEmail")
+    public String sendEmail(Model model, @ModelAttribute("object") Object obj) {
+// Intoarcem din veiw obiectul obj plin
+// Manipulam datele : salvam, redactam ecc
+        return "/emailPage";
+    }
 
-// NON COMPLETA   ===================================================================
-
-//    @PostMapping("/auth/login")
-//    public String showInConsoleParametersForm (HttpServletRequest request, Model model){
-//        String username = request.getParameter("username");
-//        String email = request.getParameter("email");
-//        String phone = request.getParameter("phone");
-//        String password = request.getParameter("password");
-//        String confirm_password = request.getParameter("confirm_password");
-//        String city = request.getParameter("city");
-//
-//        System.out.println("My username is: " + username);
-//        System.out.println("My email is: " + email);
-//        System.out.println("I'm from: " + city);
-//        System.out.println("My tel is: " + phone);
-//        System.out.println("My password is: " + password);
-//        System.out.println("Confirm my password: " + confirm_password);
-//        return "redirect:/auth/registration";
-//    }
 }

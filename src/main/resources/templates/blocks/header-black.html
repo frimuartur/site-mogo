@@ -1,4 +1,4 @@
-<div th:fragment="header-black" xmlns:th="http://www.w3.org/1999/xhtml">
+<div th:fragment="header-black" xmlns:th="http://www.thymeleaf.org">
     <header class="header">
         <div class="container">
             <div class="header__inner">
@@ -10,7 +10,7 @@
                     <a class="nav__link black" href="/article">Article</a>
                     <a class="nav__link black" href="/blog">Blog</a>
                     <a class="nav__link black" href="/work">Work</a>
-                    <a class="nav__link black" href="#">Contact</a>
+                    <a class="nav__link black" href="/contact">Contact</a>
                     <form th:action="@{/logout}" method="post">
                         <input class="logOut" type="submit" value="Sign Out"/>
                     </form>

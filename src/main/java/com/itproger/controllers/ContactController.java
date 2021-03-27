@@ -6,12 +6,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/home")
-public class HomeController {
+@RequestMapping("/contact")
+public class ContactController {
 
     @GetMapping
-    public String showHome (){
-        return "/home/home";
+    public String contactEmail(Model model){
+        return "/contact/email";
     }
-
 }

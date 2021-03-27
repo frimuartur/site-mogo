@@ -6,5 +6,4 @@ public class RandomNumber {
         String number = String.valueOf(rand);
         return number;
     }
-
 }

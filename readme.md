@@ -7,5 +7,5 @@
    c) Update user_id trebuie sa ramaie acelasi;
 5. Afisarea posturilor de imbunatatit;
 
-Pasul urmator:
+Pasul urmator: 
 controller per model
